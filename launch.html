@@ -7,9 +7,12 @@
     <script src="node_modules/fhirclient/build/fhir-client.js"></script>
     <script>
       FHIR.oauth2.authorize({
-        "client_id": "growth_chart",
-        "scope":  "patient/Observation.read patient/Patient.read offline_access",
-        // "client_id": "944d96a0-4caf-4a96-813e-bc38aadb1169" // HSPC
+        //"scope":  "launch/patient patient/.cruds openid fhirUser",
+        "scope":  "launch/patient patient/Patient.r patient/Observation.rs openid fhirUser",
+        "client_id": "uzl6k44MNyqVDNYk", // new chart app
+        "patientId": "0a3604ad-602e-59f9-b871-e188fb47e4c2"
+        //"client_scret": "qx^Ux]5YKx4a@JuT",
+        //"grant_type":"client_credentials"
         // "client_id": "5570f8be-6caf-4915-ae15-69545ab38e68" // Cerner
       });
     </script>
